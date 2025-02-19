@@ -68,3 +68,28 @@
   </div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Example</title>
+</head>
+<body>
+
+  <!-- This is the button the user will click -->
+  <button id="myButton">Click me!</button>
+
+  <!-- JavaScript code that makes the button work -->
+  <script>
+    // Function that shows a message when the button is clicked
+    function newFunction() {
+      alert("Button clicked! New code works.");
+    }
+
+    // This links the button to the function so it runs when clicked
+    document.getElementById("myButton").addEventListener("click", newFunction);
+  </script>
+
+</body>
+</html>
