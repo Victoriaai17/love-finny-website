@@ -93,3 +93,53 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love More</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffc0cb;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const confettiColors = ['#fff', '#ff69b4', '#b86c74'];
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.position = 'absolute';
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+        confetti.style.top = `${Math.random() * 100}vh`;
+        confetti.style.left = `${Math.random() * 100}vw`;
+        confetti.style.animation = `falling 5s linear infinite`;
+        document.body.appendChild(confetti);
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Aww, I love you moreee!</h1>
+  <img src="https://media.tenor.com/tl4tMev7ICEAAAAM/instagram-zefexwoo-shaurya.gif" alt="Cute bear hug gif">
+</body>
+</html>
