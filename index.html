@@ -49,24 +49,34 @@
       font-size: 2rem;
       margin-top: 20px;
       color: pink;
+      text-align: center;
+    }
+    #message img {
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      margin-top: 20px;
     }
   </style>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      const yesButton = document.getElementById('yes');
       const noButton = document.getElementById('no');
+      const messageDiv = document.getElementById('message');
+
+      // Hide the "Yes" and "No" buttons and show the message when "Yes" is clicked
+      yesButton.addEventListener('click', () => {
+        yesButton.style.display = 'none';  // Hide "Yes" button
+        noButton.style.display = 'none';   // Hide "No" button
+        messageDiv.style.display = 'block'; // Show the message
+      });
+
+      // Random position for "No" button when hovered
       noButton.addEventListener('mouseover', () => {
         const randomX = Math.random() * (window.innerWidth - noButton.offsetWidth);
         const randomY = Math.random() * (window.innerHeight - noButton.offsetHeight);
         noButton.style.left = `${randomX}px`;
         noButton.style.top = `${randomY}px`;
-      });
-
-      const yesButton = document.getElementById('yes');
-      yesButton.addEventListener('click', () => {
-        // Hide the buttons and show the "I love you more" message
-        document.getElementById('yes').style.display = 'none';
-        document.getElementById('no').style.display = 'none';
-        document.getElementById('message').style.display = 'block';
       });
     });
   </script>
@@ -75,6 +85,7 @@
   <h1>Do You Love Me?</h1>
   <button id="yes" class="button">Yes</button>
   <button id="no" class="button">No</button>
+  
   <div class="bears">
     <img src="https://gifdb.com/images/high/animated-bear-is-in-love-obdfb0txoitfinz6.gif" alt="Cute bear gif">
     <img src="https://media.tenor.com/xP5P9I_JvB4AAAAM/stafford-matt.gif" alt="Cute bear gif">
